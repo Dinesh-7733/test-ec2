@@ -11,9 +11,10 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-app.use('/api', (req, res) => {
-  res.send('Hello World!');
+app.use('/', (req, res) => {
+  res.send('Hello World! , Welcome to the Health Check API');
 });
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/health', healthRoutes);
